@@ -1,0 +1,35 @@
+.menu__item {
+    text-decoration: none;
+    color: $color1;
+    position: relative;
+    font-weight: 400;
+    z-index: 2;
+    &:not(:last-child)::after {
+        content: url(/img/Line.png);
+        display: inline-block;
+        margin: 0 25px;
+    }
+    &:hover {
+        transform: scale(1.7);
+        color: #FFA60D;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu__item {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .menu__item {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child)::after {
+            content: url(/img/Line.png);
+            display: inline-block;
+            margin: 0 15px;
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.btn-up {
+    display: inline-block;
+    background-color: #FFA60D;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+    line-height: 70px;
+    &:hover {
+        cursor: pointer;
+        background-color: grey;
+    }
+    &:active {
+        background-color: #555;
+    }
+    &:after {
+        content: "\f077";
+        font-family: FontAwesome;
+        font-size: 2em;
+        line-height: 50px;
+        color: #FFA60D;
+    }
+}

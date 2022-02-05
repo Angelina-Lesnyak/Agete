@@ -1,0 +1,98 @@
+                    .content-dishes {
+                        width: calc((100% - 2 * 48px) / 3);
+                        max-width: 360px;
+                        text-align: left;
+                        position: relative;
+                        &--red::before {
+                            @include stickers(#D33B3B, 58px, 58px);
+                            content: "HOT!";
+                        }
+                        &--green::before {
+                            @include stickers(#B3E151, 58px, 58px);
+                            content: "NEW!";
+                        }
+                        &--yellow::before {
+                            @include stickers(#E5A434, 58px, 58px);
+                            content: "HIT!";
+                        }
+                        &:not(:last-child) {
+                            margin-right: 48px;
+                        }
+                        &__picture {
+                            margin-bottom: 35px;
+                        }
+                        &__heading {
+                            @include heading-article;
+                        }
+                        &__dish-desk {
+                            @include grey-text (1.8rem, 22px);
+                            margin: 15px 0px;
+                        }
+                        &__price {
+                            @include price;
+                        }
+                    }
+                    
+                    @media screen and (max-width: 1250px) {
+                        .content-dishes {
+                            img {
+                                margin-bottom: 35px;
+                                width: 300px;
+                                height: 200px;
+                            }
+                            &:not(:last-child) {
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                    
+                    @media screen and (max-width: 1060px) {
+                        .content-dishes {
+                            &:not(:last-child) {
+                                margin-right: 25px;
+                            }
+                        }
+                        @media screen and (max-width: 1024px) {
+                            .content-dishes {
+                                width: calc((100% - 2 * 92px) / 3);
+                                max-width: 252px;
+                                img {
+                                    margin-bottom: 15px;
+                                    width: 252px;
+                                    height: 156px;
+                                }
+                                &:not(:last-child) {
+                                    margin-right: 92px;
+                                }
+                                &--red::before {
+                                    @include stickers(#D33B3B, 46px, 46px);
+                                    content: "HOT!";
+                                    font-size: 12px;
+                                    line-height: 46px;
+                                }
+                                &--green::before {
+                                    @include stickers(#B3E151, 46px, 46px);
+                                    content: "NEW!";
+                                    font-size: 1.2rem;
+                                    line-height: 46px;
+                                }
+                                &--yellow::before {
+                                    @include stickers(#E5A434, 46px, 46px);
+                                    content: "HIT!";
+                                    font-size: 1.2rem;
+                                    line-height: 46px;
+                                }
+                                &__heading {
+                                    @include heading-article;
+                                    font-size: 2.5rem;
+                                }
+                                &__dish-desk {
+                                    @include grey-text (1.5rem, 18px);
+                                    margin: 15px 0px;
+                                }
+                                &__price {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
